@@ -118,9 +118,8 @@ public class Main {
                 if(question.charAt(i) == ' ') {
                     if (!question.substring(track, i).equals("")) {
                         String nu = question.substring(track, i);
-                        nu.replaceAll("”", "");
-                        nu.replaceAll("“", "");
-                        nu.replaceAll(",", "");
+                        nu = replaceThing(nu);
+                        nu.replaceAll(" ", "");
                         words.add(nu.toLowerCase());
                         track = i + 1;
                     }
